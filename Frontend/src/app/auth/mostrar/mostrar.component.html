@@ -1,0 +1,40 @@
+<div class="table-responsive">
+    <table class="table table-hover">
+
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Eliminar</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Ver</th>
+        </tr>
+        <tr *ngFor='let c of usuarios' class="table-active">
+            <!--<td> <a href="{{c.ruta}}"><img-->
+            <td> <a> {{c.nombre}}
+                </a>
+            </td>
+            <td>{{c.apellido}}</td>
+            <td>{{c.correo}}</td>
+            <td>{{c.telefono}}</td>
+            <td>
+                <button class="btn waves-effect waves-light" id="{{c.nombre}}id" type="submit" name="action"
+                    (click)="Eliminar(c.id )">
+                    <i class="btn btn-outline-danger">Eliminar</i>
+                </button>
+            </td>
+            <td>
+                <button class="btn waves-effect waves-light" type="submit" name="action" (click)="Editar(c.id,c.correo)">
+                    <i class="btn btn-outline-warning">Editar</i>
+                </button>
+            </td>
+            <td>
+                <button class="btn waves-effect waves-light" type="submit" name="action" (click)="Ver(c.id)">
+                    <i class="btn btn-outline-primary">Ver</i>
+                </button>
+            </td>
+        </tr>
+
+    </table>
+</div>

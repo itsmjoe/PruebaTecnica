@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pruebatecnica-49fcd": {
+      "hosting": {
+        "Frontend": [
+          "pruebatecnica-49fcd"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pruebatecnica-49fcd"
+  }
+}
